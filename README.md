@@ -9,6 +9,40 @@ A native PlayStation Vita port of **MOTHER: Encore**, the free fan-made reimagin
 > Based on **MOTHER: Encore ACT 2 — v0.4.0.3 (Windows)**.
 > Original game by **Pkdotts** and team: **https://mother-encore.itch.io/mother-encore**
 
+## Release Status
+
+<p align="center">
+  <img alt="Overall progress" src="https://img.shields.io/badge/Overall_progress-~55%25-2ea44f?style=for-the-badge">
+  &nbsp;
+  <img alt="Platform" src="https://img.shields.io/badge/PS_Vita-Godot_3.5_RC5-003791?style=for-the-badge&logo=playstation&logoColor=white">
+  &nbsp;
+  <img alt="State" src="https://img.shields.io/badge/State-technical_preview-d29922?style=for-the-badge">
+</p>
+
+<p align="center">The current Vita build has reached these steps on real hardware:</p>
+
+<table align="center">
+  <thead>
+    <tr>
+      <th align="left">Step</th>
+      <th align="left">Progress</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Decompile &amp; PC baseline runs</td><td><code>██████████████</code>&nbsp;&nbsp;Done</td></tr>
+    <tr><td>Game data packed in PCK (<code>.yaml</code>/<code>.ecs</code>)</td><td><code>██████████████</code>&nbsp;&nbsp;Done</td></tr>
+    <tr><td>Boot &mdash; no out-of-memory crash</td><td><code>██████████████</code>&nbsp;&nbsp;Done</td></tr>
+    <tr><td>Title screen on hardware</td><td><code>██████████████</code>&nbsp;&nbsp;Done</td></tr>
+    <tr><td>Controller input + Vita button prompts</td><td><code>██████████████</code>&nbsp;&nbsp;Done</td></tr>
+    <tr><td>Touch L2/R2 emulation</td><td><code>██████████████</code>&nbsp;&nbsp;Done</td></tr>
+    <tr><td>New Game / overworld</td><td><code>█████████░░░░░</code>&nbsp;&nbsp;Testing</td></tr>
+    <tr><td>Resolution (960&times;544) tuning</td><td><code>█████████░░░░░</code>&nbsp;&nbsp;Testing</td></tr>
+    <tr><td>GPU / performance tuning</td><td><code>███░░░░░░░░░░░</code>&nbsp;&nbsp;Pending</td></tr>
+    <tr><td>Playable gameplay loop</td><td><code>████░░░░░░░░░░</code>&nbsp;&nbsp;Pending</td></tr>
+    <tr><td><b>Overall</b></td><td><code>████████░░░░░░</code>&nbsp;&nbsp;<b>~55%</b></td></tr>
+  </tbody>
+</table>
+
 ---
 
 ## ⚠️ Disclaimer
@@ -54,17 +88,15 @@ Made entirely from the ground up using the Godot Engine, Encore aims to adapt th
 
 ## Controls (Controles)
 
-<!-- TODO: add Assets/controlsvita.png control diagram -->
-
 <div align="center">
 
 | Control | Action | Control | Action |
 |:---:|:---|:---:|:---|
-| **D-Pad / Left Stick** | Move | ✕ **Cross** | Confirm / Interact |
-| **△ Triangle / START** | Menu / Select | ○ **Circle** | Cancel / Back |
-| **□ Square** | Crouch / Telepathy (hold) | **SELECT** | Open Map |
+| <img src="Assets/SonyButtons/up.png" height="18"> <img src="Assets/SonyButtons/down.png" height="18"> <img src="Assets/SonyButtons/left.png" height="18"> / <img src="Assets/SonyButtons/analog_l.png" height="18"> | Move | <img src="Assets/SonyButtons/cross.png" height="18"> | Confirm / Interact |
+| <img src="Assets/SonyButtons/triangle.png" height="18"> | Menu | <img src="Assets/SonyButtons/circle.png" height="18"> | Cancel / Back |
+| <img src="Assets/SonyButtons/square.png" height="18"> | Crouch / Telepathy (hold) | <img src="Assets/SonyButtons/analog_r.png" height="18"> | Camera |
 | **L1** | Previous party member | **R1** | Next party member |
-| **Left Touch (screen)** | **L2** — Scope / markers | **Right Touch (screen)** | **R2** — Crouch / Telepathy |
+| <img src="Assets/SonyButtons/touchpad.png" height="20"> **Left half** | **L2** — Scope / markers | <img src="Assets/SonyButtons/touchpad.png" height="20"> **Right half** | **R2** — Crouch / Telepathy |
 
 </div>
 
