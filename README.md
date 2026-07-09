@@ -49,21 +49,20 @@ Made entirely from the ground up using the Godot Engine, Encore aims to adapt th
 
 ## Installation
 
+Every release ships **two files**: the `.vpk` (the app itself) and a `-GameData.zip` (the game data, i.e. `game_data/game.pck`). You need both.
+
 1. Head to the **[Releases](../../releases)** tab.
-2. Download the latest `MotherEncore-Vita-x.x.x.vpk` (self-contained - includes the game data, no extra steps needed).
-3. Install it on your PS Vita using VitaShell or **[FMVita](https://github.com/WolffsRoom/FMVita)** (my personalized VitaShell).
-4. Have fun!
+2. Download the latest `MotherEncore-Vita-x.x.x.vpk` and `MotherEncore-Vita-x.x.x-GameData.zip`.
+3. Install the `.vpk` on your PS Vita using VitaShell or **[FMVita](https://github.com/WolffsRoom/FMVita)** (my personalized VitaShell).
+4. Extract the `-GameData.zip` - you'll get a `game_data` folder containing `game.pck`.
+5. Connect your Vita via FTP or USB and copy that `game_data` folder into:
+   `ux0:app/MOTHER001/`
+   *(The file must end up exactly at `ux0:app/MOTHER001/game_data/game.pck`.)*
+6. Have fun!
 
 > This build is redistributed under MOTHER: Encore's **MIT license**, with full credit to the original authors. If you enjoy the game, please support the developers at the **[official page](https://mother-encore.itch.io/mother-encore)**.
 
-### Updating (existing installs)
-If you already have the game installed and just want to update the game data without reinstalling the VPK:
-1. Download `MotherEncore-Vita-x.x.x-GameData.zip` from the same release.
-2. Extract it - you'll get a `game_data` folder containing `game.pck`.
-3. Connect your Vita via FTP or USB and copy that `game_data` folder into:
-   `ux0:app/MOTHER001/`
-   *(The file must end up exactly at `ux0:app/MOTHER001/game_data/game.pck`.)*
-
+> **UPDATE NOTICE:** When updating, always install **both** the new `.vpk` and the new `-GameData.zip` - a newer VPK isn't guaranteed to work with an older `game.pck`, and vice versa.
 > _Save files are not lost when uninstalling or updating (they are stored under `ux0:data/godot/app_userdata/MOTHER Encore/...`)._
 
 ---
@@ -148,8 +147,8 @@ Since this port is based on the Godot version, several parts of the game were re
 
 ## Known Issues
 This is an early technical beta - expect rough edges:
+- **Battle crashes:** The game still crashes when entering the first battle. Fix planned for the next version.
 - **Performance:** GPU load is high and frame rate is currently low in the overworld/title; performance tuning is still in progress.
-- **Battle crashes:** Entering battle can run out of memory and crash on some hardware - the fix (loading skill-effect graphics on demand instead of all at once) is in progress.
 - Some scenes are still being optimized for the PowerVR GPU.
 - Three unrecoverable developer/joke dialogue sheets from the decompile (`Snowman`, `Testing`, `shitpost`) were removed; they are not part of normal gameplay.
 
