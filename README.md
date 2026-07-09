@@ -74,9 +74,10 @@ Made entirely from the ground up using the Godot Engine, Encore aims to adapt th
 
 ## Screenshots
 
-<!-- TODO: drop the Vita captures into Assets/prints/ and reference them here -->
 <p align="center">
-  <img src="Assets/PSVita_Screen.png" width="60%">
+  <img src="Assets/prints/2026-07-09-000536-283215.png" width="48%">
+  <img src="Assets/prints/2026-07-09-000546-276455.png" width="48%">
+  <img src="Assets/prints/2026-07-09-000610-651034.png" width="48%">
 </p>
 
 ---
