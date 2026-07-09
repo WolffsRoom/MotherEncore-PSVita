@@ -2,11 +2,11 @@
   <img src="Assets/PSVita_Screen.png" alt="MOTHER: Encore - PS Vita Port">
 </p>
 
-# MOTHER: Encore (ACT 2) — PS Vita Port
+# MOTHER: Encore (ACT 2) - PS Vita Port
 
 A native PlayStation Vita port of **MOTHER: Encore**, the free fan-made reimagining of MOTHER 1, adapted from its original **Godot Engine** PC release. This repository contains the source patches, control rewrites, and tooling created to make the game run natively on the PS Vita hardware.
 
-> Based on **MOTHER: Encore ACT 2 — v0.4.0.3 (Windows)**.
+> Based on **MOTHER: Encore ACT 2 - v0.4.0.3 (Windows)**.
 > Original game by **Pkdotts** and team: **https://mother-encore.itch.io/mother-encore**
 
 ## Release Status
@@ -50,7 +50,7 @@ Made entirely from the ground up using the Godot Engine, Encore aims to adapt th
 ## Installation
 
 1. Head to the **[Releases](../../releases)** tab.
-2. Download the latest `MotherEncore-Vita-x.x.x.vpk` (self-contained — includes the game data, no extra steps needed).
+2. Download the latest `MotherEncore-Vita-x.x.x.vpk` (self-contained - includes the game data, no extra steps needed).
 3. Install it on your PS Vita using VitaShell or **[FMVita](https://github.com/WolffsRoom/FMVita)** (my personalized VitaShell).
 4. Have fun!
 
@@ -59,7 +59,7 @@ Made entirely from the ground up using the Godot Engine, Encore aims to adapt th
 ### Updating (existing installs)
 If you already have the game installed and just want to update the game data without reinstalling the VPK:
 1. Download `MotherEncore-Vita-x.x.x-GameData.zip` from the same release.
-2. Extract it — you'll get a `game_data` folder containing `game.pck`.
+2. Extract it - you'll get a `game_data` folder containing `game.pck`.
 3. Connect your Vita via FTP or USB and copy that `game_data` folder into:
    `ux0:app/MOTHER001/`
    *(The file must end up exactly at `ux0:app/MOTHER001/game_data/game.pck`.)*
@@ -78,7 +78,7 @@ If you already have the game installed and just want to update the game data wit
 | <img src="Assets/SonyButtons/triangle.png" height="18"> | Menu | <img src="Assets/SonyButtons/circle.png" height="18"> | Cancel / Back |
 | <img src="Assets/SonyButtons/square.png" height="18"> | Crouch / Telepathy (hold) | <img src="Assets/SonyButtons/analog_r.png" height="18"> | Camera |
 | **L1** | Previous party member | **R1** | Next party member |
-| <img src="Assets/SonyButtons/touchpad.png" height="20"> **Left half** | **L2** — Scope / markers | <img src="Assets/SonyButtons/touchpad.png" height="20"> **Right half** | **R2** — Crouch / Telepathy |
+| <img src="Assets/SonyButtons/touchpad.png" height="20"> **Left half** | **L2** - Scope / markers | <img src="Assets/SonyButtons/touchpad.png" height="20"> **Right half** | **R2** - Crouch / Telepathy |
 
 </div>
 
@@ -147,9 +147,9 @@ Since this port is based on the Godot version, several parts of the game were re
 ---
 
 ## Known Issues
-This is an early technical beta — expect rough edges:
+This is an early technical beta - expect rough edges:
 - **Performance:** GPU load is high and frame rate is currently low in the overworld/title; performance tuning is still in progress.
-- **Battle crashes:** Entering battle can run out of memory and crash on some hardware — the fix (loading skill-effect graphics on demand instead of all at once) is in progress.
+- **Battle crashes:** Entering battle can run out of memory and crash on some hardware - the fix (loading skill-effect graphics on demand instead of all at once) is in progress.
 - Some scenes are still being optimized for the PowerVR GPU.
 - Three unrecoverable developer/joke dialogue sheets from the decompile (`Snowman`, `Testing`, `shitpost`) were removed; they are not part of normal gameplay.
 
@@ -162,7 +162,7 @@ This port made use of **Anthropic's Claude (via Claude Code)** to accelerate cra
 ---
 
 ## Credits & Links
-- **MOTHER: Encore** — created by **Pkdotts** and team — https://mother-encore.itch.io/mother-encore
+- **MOTHER: Encore** - created by **Pkdotts** and team - https://mother-encore.itch.io/mother-encore
 - Please support the original developers and the official MOTHER series.
 
 Follow my other work here as well:
