@@ -16,32 +16,10 @@ A native PlayStation Vita port of **MOTHER: Encore**, the free fan-made reimagin
   &nbsp;
   <img alt="Platform" src="https://img.shields.io/badge/PS_Vita-Godot_3.5_RC5-003791?style=for-the-badge&logo=playstation&logoColor=white">
   &nbsp;
-  <img alt="State" src="https://img.shields.io/badge/State-technical_preview-d29922?style=for-the-badge">
+  <img alt="State" src="https://img.shields.io/badge/State-Playable-brightgreen?style=for-the-badge">
 </p>
 
-<p align="center">The current Vita build has reached these steps on real hardware:</p>
-
-<table align="center">
-  <thead>
-    <tr>
-      <th align="left">Step</th>
-      <th align="left">Progress</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>Decompile &amp; PC baseline runs</td><td><code>██████████████</code>&nbsp;&nbsp;Done</td></tr>
-    <tr><td>Game data packed in PCK (<code>.yaml</code>/<code>.ecs</code>)</td><td><code>██████████████</code>&nbsp;&nbsp;Done</td></tr>
-    <tr><td>Boot &mdash; no out-of-memory crash</td><td><code>██████████████</code>&nbsp;&nbsp;Done</td></tr>
-    <tr><td>Title screen on hardware</td><td><code>██████████████</code>&nbsp;&nbsp;Done</td></tr>
-    <tr><td>Controller input + Vita button prompts</td><td><code>██████████████</code>&nbsp;&nbsp;Done</td></tr>
-    <tr><td>Touch L2/R2 emulation</td><td><code>██████████████</code>&nbsp;&nbsp;Done</td></tr>
-    <tr><td>New Game / overworld</td><td><code>█████████░░░░░</code>&nbsp;&nbsp;Testing</td></tr>
-    <tr><td>Resolution (960&times;544) tuning</td><td><code>█████████░░░░░</code>&nbsp;&nbsp;Testing</td></tr>
-    <tr><td>GPU / performance tuning</td><td><code>███░░░░░░░░░░░</code>&nbsp;&nbsp;Pending</td></tr>
-    <tr><td>Playable gameplay loop</td><td><code>████░░░░░░░░░░</code>&nbsp;&nbsp;Pending</td></tr>
-    <tr><td><b>Overall</b></td><td><code>████████░░░░░░</code>&nbsp;&nbsp;<b>~55%</b></td></tr>
-  </tbody>
-</table>
+<p align="center"><i>Bugs, crashes, poor performance, but it's playable (I guess).</i></p>
 
 ---
 
@@ -72,16 +50,20 @@ Made entirely from the ground up using the Godot Engine, Encore aims to adapt th
 ## Installation
 
 1. Head to the **[Releases](../../releases)** tab.
-2. Download the latest `MotherEncore-Vita-x.x.x.vpk` and `game_data.zip` (the Vita-ready game files).
-3. Install `MotherEncore-Vita-x.x.x.vpk` on your PS Vita using VitaShell or **[FMVita](https://github.com/WolffsRoom/FMVita)** (my personalized VitaShell).
-4. Extract `game_data.zip`, then connect your Vita via FTP or USB and copy the `game_data` folder into your Vita app folder at:
-   `ux0:app/MOTHER001/`
-   *(The file must end up exactly at `ux0:app/MOTHER001/game_data/game.pck`.)*
-5. Have fun!
+2. Download the latest `MotherEncore-Vita-x.x.x.vpk` (self-contained — includes the game data, no extra steps needed).
+3. Install it on your PS Vita using VitaShell or **[FMVita](https://github.com/WolffsRoom/FMVita)** (my personalized VitaShell).
+4. Have fun!
 
 > This build is redistributed under MOTHER: Encore's **MIT license**, with full credit to the original authors. If you enjoy the game, please support the developers at the **[official page](https://mother-encore.itch.io/mother-encore)**.
 
-> **UPDATE NOTICE:** If you wish to update the game, please **update the game files as well** (`game.pck`), not just the VPK.
+### Updating (existing installs)
+If you already have the game installed and just want to update the game data without reinstalling the VPK:
+1. Download `MotherEncore-Vita-x.x.x-GameData.zip` from the same release.
+2. Extract it — you'll get a `game_data` folder containing `game.pck`.
+3. Connect your Vita via FTP or USB and copy that `game_data` folder into:
+   `ux0:app/MOTHER001/`
+   *(The file must end up exactly at `ux0:app/MOTHER001/game_data/game.pck`.)*
+
 > _Save files are not lost when uninstalling or updating (they are stored under `ux0:data/godot/app_userdata/MOTHER Encore/...`)._
 
 ---
@@ -165,7 +147,10 @@ Since this port is based on the Godot version, several parts of the game were re
 ---
 
 ## Known Issues
-- Some scenes are still being optimized for the PowerVR GPU (occasional slowdown). <!-- TODO: update after GPU pass -->
+This is an early technical beta — expect rough edges:
+- **Performance:** GPU load is high and frame rate is currently low in the overworld/title; performance tuning is still in progress.
+- **Battle crashes:** Entering battle can run out of memory and crash on some hardware — the fix (loading skill-effect graphics on demand instead of all at once) is in progress.
+- Some scenes are still being optimized for the PowerVR GPU.
 - Three unrecoverable developer/joke dialogue sheets from the decompile (`Snowman`, `Testing`, `shitpost`) were removed; they are not part of normal gameplay.
 
 ---
